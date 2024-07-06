@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'JurassicPark';
+  src: url('./JurassicPark.ttf') format('truetype');
+}
+
+.info-page-container {
+  position: relative;
+  min-height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px; /* Ensure clickable elements are not covered by fixed elements */
+}
+
+.text-center {
+  margin-bottom: 2rem; /* Space below the header */
+}
+
+.jurassic-park {
+  font-family: 'JurassicPark';
+  font-size: 6rem; /* Adjust size */
+  color: #FF69B4; /* Pink color */
+  text-shadow: -2px -2px 0 #00BFFF, 2px -2px 0 #00BFFF, -2px 2px 0 #00BFFF, 2px 2px 0 #00BFFF; /* Blue shadow */
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 2rem; /* Adjust size for subtitle */
+  color: #000; /* Black color */
+  text-align: center;
+  margin-top: 0; /* Remove margin to hug the title */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Full width for better alignment and click area */
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  margin: 10px 0;
+  width: 100%; /* Ensures full width for easier clicking */
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.icon {
+  margin-right: 10px; /* Space between icon and text */
+  width: 24px; /* Uniform icon size */
+  height: 24px;
+}
+
+.anchor-logo, .nate-portrait, .keller-logo {
+  width: 15%; /* Standardize size for visual consistency */
+  height: auto;
+  margin: 20px 0; /* Adequate spacing around images */
+}
+
+.keller-logo, .nate-portrait {
+  position: fixed;
+  bottom: 10px;
+  z-index: 5; /* Lower than clickable areas */
+}
+
+.keller-logo {
+  left: 10px;
+}
+
+.nate-portrait {
+  right: 10px;
+}
+
+@media (max-width: 600px) {
+  .jurassic-park {
+      font-size: 10vw; /* Larger for visibility on mobile */
+  }
+
+  .icon {
+      width: 30px; /* Slightly larger icons on mobile */
+      height: 30px;
+  }
+
+  .link-item {
+      font-size: 4vw; /* Responsive font size for mobile */
+      padding: 10px 15px; /* Larger tap areas on mobile */
+  }
+}
